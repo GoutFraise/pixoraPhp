@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+:root{
+    --color-blue: #0500FC;
+    --color-green: #2FCC00;
+    --color-red: #CC2F00;
+    --color-white: #F6F6FF;
+    --color-gray: #888;
+    --color-black: #111111;
+    --color-light-gray:#EAEAEA;
+    /* font-family */
+    --font-roboto:'Roboto', sans-serif;
+    --font-title-inter:'Inter', sans-serif;
+}

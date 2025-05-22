@@ -6,10 +6,9 @@
 		<title>Document</title>
 		<meta name="description" content="..." />
 		<meta name="author" content="Maxime Germis" />
-
         <link rel="icon" type="image/png" sizes="76x76" href="..." />
-		<link rel="stylesheet" href="CSS/variables.css" />
-		<link rel="stylesheet" href="CSS/style.css" />
+		<link rel="stylesheet" href="./public/CSS/var.css" />
+		<link rel="stylesheet" href="./public/CSS/style.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,8 +16,7 @@
 			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
-
-		<script src="JS/script.js" defer></script>
+		<script src="./public/JS/script.js" defer></script>
 	</head>
 
 	<body id="index">
@@ -32,8 +30,8 @@
 				<input type="text" placeholder="Recherche">
 			</div>
 			<div>
-				<a href="./login.html" class="connection">connection <i class="fa-solid fa-check"></i></a>
-				<a href="./inscription.html">inscription <i class="fa-solid fa-check"></i></a>
+				<a href="connexion" class="connection">connection <i class="fa-solid fa-check"></i></a>
+				<a href="inscription">inscription <i class="fa-solid fa-check"></i></a>
 			</div>
 		</header>
             <?= $content ?>

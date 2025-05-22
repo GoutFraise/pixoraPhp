@@ -1,208 +1,156 @@
-/* Les variables de base */
-:root {
-	--font-main: 'Montserrat', sans-serif;
-	--font-weight-bold: 600;
-	--font-weight-extra-bold: 700;
-	--font-weight-black: 800;
-	/* Couleurs */
-	--color-blue: #1327b7;
-	--color-blue-1: #1b41e9;
-	--color-blue-2: #3d4fd1;
-	--color-blue-3: #697af3;
-	--color-white: #fafafa;
-	--color-white-1: #eeedf4;
-	--color-white-2: #dedeeb;
-	--color-gray: #d4d4d4;
-	--color-gray-1: #adadad;
-	--color-black: #131313;
-	--color-black-1: #1c1b1f;
-	--color-black-2: #434141;
-	--color-red: #b5403c;
-	--color-red-1: #d62038;
-	--color-red-2: #991022;
-	--color-green: #11b86a;
-	--color-green-1: #23a166;
-	--color-green-2: #3ad98f;
-	--color-orange: #f88a0c;
-	--color-orange-1: #d68120;
-	--color-orange-2: #e8a04d;
-	--color-orange-3: #e5ae6f;
-	--border-gray: rgba(255, 255, 255, 0.171);
-	/* Tailles de texte */
-	--text-size-small: 0.8rem;
-	--text-size-medium: 1rem;
-	--text-size-large: 1.5rem;
-	--text-size-extra: 2.5rem;
-	/* Bordures */
-	--border-radius-small: 0.5rem;
-	--border-radius-medium: 1rem;
-	--border-radius-big: 2rem;
-	--border-radius-circle: 100%;
-	/* Les marges et espacements */
-	--margin-small: 0.5rem;
-	--margin-left-right-small: 0.5rem 0;
-	--margin-medium: 1rem;
-	--margin-left-right-medium: 1rem 0;
-	--margin-large: 2rem;
-	--margin-left-right-large: 2rem 0;
-	--margin-extra: 4rem;
-	--margin-left-right-extra: 4rem 0;
-	--padding-small: 0.5rem;
-	--padding-left-right-small: 0.5rem 0;
-	--padding-medium: 1rem;
-	--padding-left-right-medium: 1rem 0;
-	--padding-large: 2rem;
-	--padding-left-right-large: 2rem 0;
-	--padding-extra: 4rem;
-	--padding-left-right-extra: 4rem 0;
-	--gap-small: 0.5rem;
-	--gap-medium: 1rem;
-	--gap-large: 2rem;
-	--gap-extra: 4rem;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: inherit;
+	font: inherit;
+	text-decoration: none;
+	list-style: none;
+	border: none;
+    font-family: var(--font-roboto);
 }
-.container{
-	width: 1140px;
-	padding: 0 auto;
+img{
+    width: 100%;
 }
-#login .zf {
-	height: 100vh;
-	width: 100vw;
-	padding: var(--padding-large);
-	gap: var(--gap-extra);
-	background-color: var(--color-red-1);
+h1,h2,h3,h4,h5,h6{
+    color: var(--color-red);
+}
+h2 {
+	font-size: 1.5rem;
+	font-weight: 800;
 }
 
-#login .inscription {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
+
+p{
+	font-size: 1rem;
 }
 
-#login .login {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
+h3,
+h4,
+h5,
+button,
+a,
+input,
+span,
+i,
+select,
+textarea,
+label {
+	font-weight: 600;
+	font-size: 1rem;
 }
-
-#login #sectionText,
-#login #sectionForm {
-	display: flex;
-	flex-direction: column;
-	gap: var(--gap-large);
-	padding: var(--padding-extra);
-	padding-top: 10rem;
-	background-color: var(--color-white);
-	border-radius: var(--border-radius-medium);
+p {
+	font-weight: 500;
 }
-
-#login #sectionText {
-	align-items: center;
-	gap: var(--gap-extra);
-}
-
-#login #sectionText h1 {
-	color: var(--color-red-1);
-	padding-bottom: var(--padding-small);
-}
-
-#login #sectionForm form {
-	display: flex;
-	font: 1em sans-serif;
-}
-
-#login img {
-	width: 10rem;
-}
-
-#login #sectionForm h2 {
-	align-self: flex-start;
-}
-
-#login #sectionForm form,
-#login #sectionForm form div {
-	display: flex;
-	flex-direction: column;
-	gap: var(--gap-medium);
-}
-
-#login #sectionForm form input {
-	padding: var(--padding-medium);
-	border-radius: var(--border-radius-small);
-	border: var(--color-black-2) 1px solid;
-	background-color: var(--color-white-1);
-	color: var(--color-black-2);
-	font-weight: var(--font-weight-bold);
-}
-
-#login #sectionForm form .redColor {
-	color: var(--color-red-1);
-}
-
-#login #sectionForm form .center {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-#login #sectionForm form .spaceBeetween {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	align-items: center;
-}
-
-#login #sectionForm form input[type='checkbox'] {
-	width: 24px;
-	height: 24px;
-	border: 1px solid var(--color-black-2);
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-#login #sectionForm form .textAlign {
-	text-align: center;
-}
-
-#login #sectionForm form button[type='submit'],
-#loginGoogle,
-#loginMeta {
-	padding: var(--padding-medium);
-	border-radius: var(--border-radius-small);
-	text-align: center;
-}
-
-#loginGoogle img,
-#loginMeta img {
-	width: 24px;
-}
-
-#login #sectionForm form button[type='submit'] {
-	background-color: var(--color-red-1);
-	color: var(--color-white);
-}
-
-#loginGoogle,
-#loginMeta {
-	flex: 1;
-	height: 1.5rem;
-	border: var(--color-black) 1px solid;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: var(--gap-small);
-}
-
-/*page base*/
 body{
-	min-height: 100vh;
+	min-height:100dvh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
-/* footer */
+#InsCon>main{
+    background-color:var(--color-red);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100dvh;
+    padding: 2rem;
+}
+#InsCon>main>div,#InsCon>main>section{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    height: 100%;
+    border-radius:2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+#InsCon>main>div{
+    width: 32%;
+    gap:1rem;
+}
+#InsCon>main>div>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+#InsCon>main>div>div>p{
+    color: var(--color-black);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#InsCon>main>div>img{
+    width: 60%;
+}
+#InsCon>main>section{
+    font-size: 1.2rem;
+    width: 60%;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+#InsCon>main>section>p{
+    font-weight: 400;
+    align-self: center;
+}
+#InsCon>main>section>form{
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#InsCon>main>section>form>div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#InsCon>main>section>form input{
+    font-weight: 400;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+#InsCon>main>section>form>div>input:focus {
+    outline: 2px solid var(--color-red);
+}
+#InsCon>main>section>form>input{
+    background-color:var(--color-red);
+    color: var(--color-white);
+    margin-top: 0.5rem;
+}
+#InsCon>main>section>form>div>input{
+    border: 1px solid var(--color-black);
+    background-color:var(--color-light-gray);
+    color: var(--color-black);
+}
+#InsCon>main>section>form>div>input::placeholder{
+    color: var(--color-black);
+    font-weight: 400;
+}
+#InsCon>main>section>form>div>label{
+    font-weight: 600;
+}
+#InsCon>main>section>form>#condition{
+    align-items: center;
+    flex-direction: row;
+}
+#InsCon>main>section>form>#condition>input{
+    height: 2dvh;
+    width: 2dvh;
+}
+#InsCon>main>section>p>a{
+    color: var(--color-red);
+    font-weight: 600;
+}
+
 footer{
 	display: flex;
 	justify-content: space-between;
 	color: var(--color-red) ;
-	background-color: var(--color-white-1);
+	background-color: var(--color-white);
 	padding: 8px 32px;
 	font-weight: 600;
 }
@@ -218,7 +166,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	padding: 16px 32px;
-	background-color: var(--color-white-1);
+	background-color: var(--color-white);
 }
 h1,
 .logo > i {
@@ -235,7 +183,7 @@ h1,
 	display: flex;
 	height: 48px;
 	align-items: center;
-	background-color: var(--color-white-2);
+	background-color: var(--color-light-gray);
 	color: var(--color-black);
 	border-radius: 24px;
 	padding: 0 16px;
@@ -251,7 +199,7 @@ h1,
 .recherche > input{
 	width: 100%;
 	height: 100%;
-	background-color: var(--color-white-2);
+	background-color: var(--color-light-gray);
 }
 header > div {
 	display: flex;
@@ -267,19 +215,19 @@ header > div > a {
 	align-items: center;
 }
 header > div > .connection {
-	background-color: var(--color-white-1);
+	background-color: var(--color-white);
 	color: var(--color-red);
 	border: 2px solid var(--color-red);
 	padding: 14px 34px;  
 }
 /*index main*/
-#index > main {
-	margin: 48px 0;
+#home {
+	padding: 4rem;
 	display: flex;
 	justify-content: center;
 }
-#index section {
-	background-color: var(--color-white-1);
+#home>section {
+	background-color: var(--color-white);
 	border-radius: 16px;
 	padding: 32px;
 }
@@ -316,13 +264,13 @@ header > div > .connection {
 .listarticle > article {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--color-white-2);
+	background-color: var(--color-light-gray);
 	padding: 16px;
 	border-radius: 16px;
 	gap: 16px;
 }
 .listarticle > article > header {
-	background-color: var(--color-white-2);
+	background-color: var(--color-light-gray);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -355,15 +303,9 @@ header > div > .connection {
 	object-fit: cover;
 }
 .listarticle > article > footer {
-	background-color: var(--color-white-2);
+	background-color: var(--color-light-gray);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 16px;
-}
-
-/*home*/
-#home>main{
-	display: grid;
-	grid-template-columns: 1fr 2fr;
 }

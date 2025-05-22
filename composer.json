@@ -1,4 +1,16 @@
 {
+    "name": "formation/pixora-php",
+    "autoload": {
+        "psr-4": {
+            "Formation\\PixoraPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Morgan Achard",
+            "email": "morgan4achard@gmail.com"
+        }
+    ],
     "require-dev": {
         "phpunit/phpunit": "^12.1"
     }

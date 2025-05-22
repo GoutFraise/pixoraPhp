@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once 'src/controllers/connexion.php';
 require_once 'vendor/autoload.php';
 use Formation\PixoraPhp\Controllers\Inscription;
 use Formation\PixoraPhp\Controllers\Connexion;

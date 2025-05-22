@@ -1,47 +1,43 @@
-<?php $title = "Inscription"?>
+<?php $title = "Inscription" ?>
 <?php ob_start(); ?>
-<main class="zf inscription">
-    <a href="./index.html">index</a>
-    <a href="./home.html">home</a>
-    <section id="sectionText">
-        <a href="index.html"><img src="IMG/image (1).png" alt="Logo Pixora" /></a>
-
+<main id="inscription">
+    <div>
+        <img src="./public/IMG/logo.png" alt="Logo de caliend">
         <div>
-            <h1 class="title">Bienvenue</h1>
-            <p>Inscrit toi pour profiter dès maintenant et rejoins l’Pixora !</p>
+            <h1>Bienvenue</h1>
+            <p>Inscrit toi maintenant et rejoins Caliend ! 
+
+            </p>
+            <a href="home">home</a>
         </div>
-    </section>
-
-    <!-- Section 100vh -->
-    <section id="sectionForm">
+    </div>
+    <section>
         <h2>S'inscrire</h2>
-        <form>
+        <form action="index.php" method="post">
             <div>
-                <label for="name">Nom d’utilisateur</label>
-                <input type="text" name="name" id="name" required minlength="4" maxlength="20" placeholder="Entre un nom d’utilisateur" />
-
-                <label for="email">Adresse mail</label>
-                <input type="email" name="email" id="email" required minlength="4" maxlength="20" placeholder="Entre ton adresse mail" />
-
-                <label for="mdp">Mot de passe</label>
-                <input type="password" name="mdp" id="mdp" required minlength="8" maxlength="20" placeholder="Entre ton mot de passe" />
-
-                <label for="mdpConfirm">Entrer à nouveau ton mot de passe</label>
-                <input type="password" name="mdpConfirm" id="mdpConfirm" required minlength="8" maxlength="20" placeholder="Entre à nouveau ton mot de passe" />
-
-                <div class="center">
-                    <input type="checkbox" />
-                    <a href="#">J’accepte les <span class="redColor">conditions d’utilisations</span></a>
-                </div>
+                <label for="pseudo">Nom d'utilisateur</label>
+                <input type="text" name="pseudo" id="pseudo" placeholder="Entre un Nom d'utilisateur">
             </div>
-
             <div>
-                <button type="submit">S’inscrire</button>
-                <a href="./login.html" class="textAlign">J’ai déjà un compte ? <span class="redColor"> Connexion</span></a>
+                <label for="identifier">Identifiant</label>
+                <input type="text" name="identifier" id="identifier" placeholder="Entre un identifiant">
             </div>
+            <div>
+                <label for="mail">Adresse mail</label>
+                <input type="mail" name="mail" id="mail" placeholder="Entre une adresse mail">
+            </div>
+            <div>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password" placeholder="Entre un mot de passe">
+            </div>
+            <div>
+                <label for="verifPassword">Entrer à nouveau votre mot de passe</label>
+                <input type="password" name="verifPassword" id="verifPassword" placeholder="Entrer à nouveau votre mot de passe">
+            </div>
+            <input type="submit" >
         </form>
+        <p>j'ai déjà un compte ? <a href="./connexion">Connexion</a></p>
     </section>
 </main>
 <?php $content = ob_get_clean(); ?>
-<?php require_once 'src/view/template.php'?>
-
+<?php require_once 'src/view/templateInsCon.php'?>

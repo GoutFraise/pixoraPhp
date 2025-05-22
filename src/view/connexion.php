@@ -9,7 +9,7 @@
                 <label for="email">Adresse mail</label>
                 <input type="email" name="email" id="email" required minlength="4" maxlength="20" placeholder="Entre ton adresse mail" />
 
-                <label for="mdp">Mot de passe</label>
+                <label for="mdp">Motf de passe</label>
                 <input type="password" name="mdp" id="mdp" required minlength="8" maxlength="20" placeholder="Entre ton mot de passe" />
 
                 <div class="spaceBeetween">

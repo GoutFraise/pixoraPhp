@@ -21,7 +21,7 @@ class User
             if($row["identifiant"]===$identifiant){
                 $loginTaken=true;
             }
-            if($row["mail"]===$identifiant){
+            if($row["mail"]===$mail){
                 $mailTaken=true;
             }
         }
@@ -52,7 +52,7 @@ class User
         }
     }
     public function isUser(){
-        $sql = "SELECT * FROM utilisateurs ";
+        $sql = "SELECT * FROM user ";
         $stmt = $this->connexion->getConnexion()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);

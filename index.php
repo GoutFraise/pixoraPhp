@@ -29,7 +29,6 @@ try {
         }
         elseif ($_GET['action'] === 'home') {
             if(isset($_SESSION["User"]) && $_SESSION["User"]!==null){
-                var_dump($_SESSION["User"]);
                 (new Home())->execute();
             }
             else{

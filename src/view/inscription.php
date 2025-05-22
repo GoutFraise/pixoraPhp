@@ -8,19 +8,19 @@
             <p>Inscrit toi maintenant et rejoins Caliend ! 
 
             </p>
-            <a href="home">home</a>
+            <a href="home">home <?=$register?></a>
         </div>
     </div>
     <section>
         <h2>S'inscrire</h2>
-        <form action="index.php" method="post">
+        <form action="" method="post">
             <div>
                 <label for="pseudo">Nom d'utilisateur</label>
                 <input type="text" name="pseudo" id="pseudo" placeholder="Entre un Nom d'utilisateur">
             </div>
             <div>
-                <label for="identifier">Identifiant</label>
-                <input type="text" name="identifier" id="identifier" placeholder="Entre un identifiant">
+                <label for="identifiant">Identifiant</label>
+                <input type="text" name="identifiant" id="identifiant" placeholder="Entre un identifiant">
             </div>
             <div>
                 <label for="mail">Adresse mail</label>

@@ -1,5 +1,6 @@
 <?php
 namespace Formation\PixoraPhp\Controllers;
+use Formation\PixoraPhp\Model\User\User;
 
 class Home{
     private function sanitize($str) {

@@ -5,6 +5,7 @@
 <?php $titleTop = ob_get_clean(); ?>
 <?php ob_start(); ?>
 <main id="home">
+    <a href="deconnexion">deco</a>
     <section class="container">
         <div class="filtre">
             <span>Trier par</span>

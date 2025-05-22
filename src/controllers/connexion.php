@@ -1,5 +1,6 @@
 <?php
 namespace Formation\PixoraPhp\Controllers;
+use Formation\PixoraPhp\Model\User\User;
 class Connexion{
     private function sanitize($str) {
         $str = htmlspecialchars($str);

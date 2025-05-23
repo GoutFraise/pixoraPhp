@@ -35,7 +35,11 @@ class Inscription{
                 $register =  "champ pas rempli ou ne respectant les condition";
             }
             if($register==="Nouvel enregistrement créé avec succès"){
+                $_SESSION["User"]=$_POST['identifiant'];
                 header("Location: index");
+            }else
+            {
+                $_SESSION["User"]=null;
             }
         }
         else{

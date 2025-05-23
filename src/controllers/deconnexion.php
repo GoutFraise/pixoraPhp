@@ -1,6 +1,5 @@
 <?php
 namespace Formation\PixoraPhp\Controllers;
-
 class Deconnexion{
     public function execute()
     {

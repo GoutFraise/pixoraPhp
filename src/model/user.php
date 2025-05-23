@@ -34,12 +34,9 @@ class User
             $stmt->bindParam(':mail', $mail);
             $stmt->bindParam(':password', $password);
             $stmt->execute();
-            $register =  "Nouvel enregistrement créé avec succès";
-            $_SESSION["User"]=$identifiant;
-            return $register;
+            return "Nouvel enregistrement créé avec succès";
         }
-        else{
-            $_SESSION["User"]=null;
+        else{ 
             if($loginTaken && $mailTaken){
                 return "login et mail deja utiliser ";
             }

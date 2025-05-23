@@ -5,6 +5,7 @@ use Formation\PixoraPhp\Controllers\Inscription;
 use Formation\PixoraPhp\Controllers\Connexion;
 use Formation\PixoraPhp\Controllers\Home;
 use Formation\PixoraPhp\Controllers\Deconnexion;
+use Formation\PixoraPhp\Controllers\Post;
 
 try {
     if (isset($_GET['action']) && $_GET['action'] !== '') {
@@ -22,6 +23,14 @@ try {
             }
             else{
                 (new Connexion())->execute();
+            }
+        }
+        elseif ($_GET['action'] === 'post') {
+            if(isset($_SESSION["User"]) && $_SESSION["User"]!==null){
+                (new Post())->execute();
+            }
+            else{
+                header("Location: connexion");
             }
         }
         elseif ($_GET['action'] === 'deconnexion') {

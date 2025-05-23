@@ -269,30 +269,30 @@ header > div > .connection {
 	border-radius: 16px;
 	gap: 16px;
 }
-.listarticle > article > header {
+.listarticle > article > #headerDiv {
 	background-color: var(--color-light-gray);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-.listarticle > article > header > div {
+.listarticle > article > #headerDiv > div {
 	display: flex;
 	gap: 16px;
 }
-.listarticle > article > header > div > img {
+.listarticle > article > #headerDiv > div > img {
 	width: 55px;
 	height: 55px;
 	border-radius: 50%;
 	object-fit: cover;
 }
-.listarticle > article > header > i {
+.listarticle > article > #headerDiv > i {
 	width: 24px;
 	height: 24px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.listarticle > article > header > div > div > h2 {
+.listarticle > article > #headerDiv > div > div > h2 {
 	color: var(--color-black);
 	font-size: 22px;
 }
@@ -302,7 +302,7 @@ header > div > .connection {
 	border-radius: 16px;
 	object-fit: cover;
 }
-.listarticle > article > footer {
+.listarticle > article > #footerDiv {
 	background-color: var(--color-light-gray);
 	display: flex;
 	justify-content: space-between;

@@ -10,11 +10,12 @@
 :root{
     --color-blue: #0500FC;
     --color-green: #2FCC00;
-    --color-red: #CC2F00;
+    --color-red: #FF0000;/*ED1C24*/
     --color-white: #F6F6FF;
     --color-gray: #888;
     --color-black: #111111;
     --color-light-gray:#EAEAEA;
+    
     /* font-family */
     --font-roboto:'Roboto', sans-serif;
     --font-title-inter:'Inter', sans-serif;

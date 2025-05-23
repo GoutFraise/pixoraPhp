@@ -48,6 +48,9 @@ body{
 	flex-direction: column;
 	justify-content: space-between;
 }
+main{
+	height: 85dvh;
+}
 #InsCon>main{
     background-color:var(--color-red);
     display: flex;
@@ -153,6 +156,7 @@ footer{
 	background-color: var(--color-white);
 	padding: 8px 32px;
 	font-weight: 600;
+	height: 5dvh;
 }
 footer>div{
 	display: flex;
@@ -167,6 +171,7 @@ header {
 	justify-content: space-between;
 	padding: 16px 32px;
 	background-color: var(--color-white);
+	height: 10dvh;
 }
 h1,
 .logo > i {
@@ -201,11 +206,11 @@ h1,
 	height: 100%;
 	background-color: var(--color-light-gray);
 }
-header > div {
+header > nav {
 	display: flex;
 	gap: 16px;
 }
-header > div > a {
+header > nav > a {
 	background-color: var(--color-red);
 	padding: 16px 36px;
 	color: var(--color-white);
@@ -214,7 +219,7 @@ header > div > a {
 	gap: 4px;
 	align-items: center;
 }
-header > div > .connection {
+header > nav > .connection {
 	background-color: var(--color-white);
 	color: var(--color-red);
 	border: 2px solid var(--color-red);
@@ -254,14 +259,13 @@ header > div > .connection {
 	align-items: center;
 	gap: 4px;
 }
-#index .listarticle {
+.listarticle {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	margin: 16px 0;
 	gap: 16px;
-	
 }
-.listarticle > article {
+.listarticle > article , #ourPost>article {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--color-light-gray);
@@ -269,43 +273,66 @@ header > div > .connection {
 	border-radius: 16px;
 	gap: 16px;
 }
-.listarticle > article > #headerDiv {
+#headerDiv{
 	background-color: var(--color-light-gray);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-.listarticle > article > #headerDiv > div {
+#headerDiv > div {
 	display: flex;
 	gap: 16px;
 }
-.listarticle > article > #headerDiv > div > img {
+#headerDiv > div > img {
 	width: 55px;
 	height: 55px;
 	border-radius: 50%;
 	object-fit: cover;
 }
-.listarticle > article > #headerDiv > i {
+#headerDiv > i {
 	width: 24px;
 	height: 24px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.listarticle > article > #headerDiv > div > div > h2 {
+#headerDiv > div > div > h2 {
 	color: var(--color-black);
 	font-size: 22px;
 }
-.listarticle > article > img {
+.listarticle > article > img , #ourPost >article>img {
 	width: 100%;
 	height: 200px;
 	border-radius: 16px;
 	object-fit: cover;
 }
-.listarticle > article > #footerDiv {
+#footerDiv {
 	background-color: var(--color-light-gray);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 16px;
+}
+#post{
+	display: flex;
+	padding: 2rem;
+	gap: 2rem;
+}
+#ourPost{
+	width: 70%;
+	display: flex;
+	overflow: auto ;
+	flex-direction: column;
+	gap:2rem;
+	padding: 0 2rem;
+}
+#createPost{
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color-light-gray);
+	padding: 16px;
+	border-radius: 16px;
+	gap: 16px;
+	align-items: stretch;
 }

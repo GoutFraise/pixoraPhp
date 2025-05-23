@@ -12,7 +12,6 @@ class Connexion{
     {
         if(isset($_POST["mail"])&& isset($_POST["password"]))
         {
-
             if(!empty($_POST['mail']) && preg_match("/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/",$_POST["mail"])
             && !empty($_POST['password'])
             // && preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*+-?&])[A-Za-z\d@$!%*+-?&]{8,}$/',$_POST["password"])
@@ -22,20 +21,12 @@ class Connexion{
                 foreach ($getAllUser as $user) {
                     if($_POST["mail"]===$user["mail"] && (password_verify($_POST['password'], $user["password"]))){
                         $_SESSION["User"]=$user["identifiant"];
+                        $_SESSION["Id"]=$user["id_user"];
                         header("Location: index");
                     }
                 }
-                // if (password_verify($_POST['password'], $hash)) { 
-                //      // Success!
-                // } else { 
-                //     // Invalid credentials 
-                // }
-
             }
-            
         }
-        
-        
         require_once 'src/view/connexion.php';
     }
 }

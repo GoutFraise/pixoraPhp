@@ -1,11 +1,14 @@
 <?php $title = "Home"?>
+
 <?php ob_start(); ?>
-<h1>Recommandation</h1>
-<h2>Abonnement</h2>
-<?php $titleTop = ob_get_clean(); ?>
+<!-- <a href="connexion" class="connection">connection <i class="fa-solid fa-check"></i></a>
+<a href="inscription">inscription <i class="fa-solid fa-check"></i></a> -->
+<a href="deconnexion" class="connection">Deconnexion</a>
+<a href="post">Post<i class="fa-solid fa-check"></i></a>
+<?php $nav = ob_get_clean(); ?>
 <?php ob_start(); ?>
+
 <main id="home">
-    <a href="deconnexion">deco</a>
     <section id="listPost">
         <div class="filtre">
             <span>Trier par</span>
@@ -39,7 +42,6 @@
             </article>
         </div>
     </section>
-    <a href="post">post</a>
 </main>
 <?php $content = ob_get_clean(); ?>
 <?php require_once 'src/view/template.php'?>

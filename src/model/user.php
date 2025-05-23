@@ -1,6 +1,5 @@
 <?php
 namespace Formation\PixoraPhp\Model;
-require_once 'src/lib/database.php';
 use Formation\PixoraPhp\Lib\Database;
 class User
 {

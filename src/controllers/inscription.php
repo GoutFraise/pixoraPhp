@@ -17,7 +17,6 @@ class Inscription{
         && isset($_POST["verifPassword"])
         && $_POST['verifPassword']===$_POST['password'])
         {
-
             if(!empty($_POST['pseudo']) && preg_match("/^\w{0,50}$/",$_POST["pseudo"])
             &&  !empty($_POST['identifiant']) && preg_match("/^\w{0,50}$/",$_POST["identifiant"])
             && !empty($_POST['mail']) && preg_match("/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/",$_POST["mail"])

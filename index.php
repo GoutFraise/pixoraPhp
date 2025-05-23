@@ -5,7 +5,7 @@ use Formation\PixoraPhp\Controllers\Inscription;
 use Formation\PixoraPhp\Controllers\Connexion;
 use Formation\PixoraPhp\Controllers\Home;
 use Formation\PixoraPhp\Controllers\Deconnexion;
-use Formation\PixoraPhp\Controllers\Post;
+use Formation\PixoraPhp\Controllers\Publish;
 
 try {
     if (isset($_GET['action']) && $_GET['action'] !== '') {
@@ -27,7 +27,7 @@ try {
         }
         elseif ($_GET['action'] === 'post') {
             if(isset($_SESSION["User"]) && $_SESSION["User"]!==null){
-                (new Post())->execute();
+                (new Publish())->execute();
             }
             else{
                 header("Location: connexion");

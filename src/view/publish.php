@@ -28,7 +28,11 @@ use Formation\PixoraPhp\Model\User;
             <input type="submit" value="Publier">
         </form>
         
-         <?=$postSend?> 
+         <?php 
+         if($postSend!=""){
+            echo $postSend;
+         }
+         ?> 
     </section>
     <section id="ourPost">
         <?php

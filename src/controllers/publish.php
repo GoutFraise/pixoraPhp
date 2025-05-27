@@ -48,11 +48,11 @@ class Publish{
                 }
             }
             else{
-                $postSend="No file uploaded or an error occurred.";;
+                $postSend="Pas de fichier a envoyer ou la description utilise des caracteres non valide";;
             }
         }
         else{
-            $postSend="formulaire pas rempli correctement";
+            $postSend="";
         }
         $getpost = new Post();
         $getAllPost=$getpost->postFromUser($_SESSION["Id"]);

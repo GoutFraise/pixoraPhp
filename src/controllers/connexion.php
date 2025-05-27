@@ -14,7 +14,7 @@ class Connexion{
         {
             if(!empty($_POST['mail']) && preg_match("/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/",$_POST["mail"])
             && !empty($_POST['password'])
-            // && preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*+-?&])[A-Za-z\d@$!%*+-?&]{8,}$/',$_POST["password"])
+            && preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*+-?&])[A-Za-z\d@$!%*+-?&]{8,}$/',$_POST["password"])
             ){
                 $_POST['mail']= $this->sanitize($_POST['mail']);
                 $_POST['password']= $this->sanitize($_POST['password']);

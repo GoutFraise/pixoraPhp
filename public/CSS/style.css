@@ -235,6 +235,8 @@ header > nav > .connection {
 	background-color: var(--color-white);
 	border-radius: 16px;
 	padding: 32px;
+	width: 100%;
+
 }
 .filtre {
 	display: flex;
@@ -264,6 +266,7 @@ header > nav > .connection {
 	grid-template-columns: 1fr 1fr;
 	margin: 16px 0;
 	gap: 16px;
+	width: 100%;
 }
 .listarticle > article , #ourPost>article {
 	display: flex;

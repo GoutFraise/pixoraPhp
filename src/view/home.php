@@ -1,5 +1,7 @@
 <?php $title = "Home"?>
-
+<?php 
+use Formation\PixoraPhp\Model\User;
+?>
 <?php ob_start(); ?>
 <!-- <a href="connexion" class="connection">connection <i class="fa-solid fa-check"></i></a>
 <a href="inscription">inscription <i class="fa-solid fa-check"></i></a> -->
@@ -20,26 +22,35 @@
             </div>
         </div>
         <div class="listarticle">
-            <article>
-                <div id="headerDiv">
-                    <div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuZeWBpFS1Le6TfHoBzN2OBuPIvKUGBSdo2A&s" alt="">
+            <?php
+            foreach($getAllPost as $post){
+                $getUser = new User();
+                $getUserPost=$getUser->getUser($post["id_user"]);
+                echo '
+                <article>
+                    <div id="headerDiv">
                         <div>
-                            <h2>Nom/Pseudo</h2>
-                            <span>Identifiant</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuZeWBpFS1Le6TfHoBzN2OBuPIvKUGBSdo2A&s" alt="">
+                            <div>
+                                <h2>'.$getUserPost[0]["pseudo"].'</h2>
+                                <span>'.$getUserPost[0]["identifiant"].'</span>
+                            </div>
                         </div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, libero provident? Delectus, necessitatibus. Recusandae reiciendis consequuntur fuga sequi veniam voluptates ipsum distinctio, quam labore odit iste aspernatur aut vel placeat.</p>
-                <img src="./public/IMG/castex.jpg" alt="">
-                <div id="footerDiv">
-                    <div><i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart"></i>69</div>
-                    <div><i class="fa-regular fa-comment"></i> 69</div>
-                    <div><i class="fa-regular fa-bookmark"></i><i class="fa-solid fa-bookmark"></i> 69</div>
-                    <div><i class="fa-solid fa-share"></i> 69</div>
-                </div>
-            </article>
+                    <p>'.$post["content"].'</p>
+                    <img src="'.$post["imgVideo"].'" alt="">
+                    <div id="footerDiv">
+                        <div><i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart"></i>69</div>
+                        <div><i class="fa-regular fa-comment"></i> 69</div>
+                        <div><i class="fa-regular fa-bookmark"></i><i class="fa-solid fa-bookmark"></i> 69</div>
+                        <div><i class="fa-solid fa-share"></i> 69</div>
+                    </div>
+                </article>
+                ';
+
+            }
+            ?>
         </div>
     </section>
 </main>

@@ -19,10 +19,17 @@ class Post
         $stmt->execute();
         return "Nouveau post créé avec succès";
     }
-    public function isUser(){
-        $sql = "SELECT * FROM user ";
+    public function postFromUser($iduser){
+        $sql = "SELECT * FROM post WHERE id_user=$iduser";
+        $stmt = $this->connexion->getConnexion()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+    public function allPost(){
+        $sql = "SELECT * FROM post";
         $stmt = $this->connexion->getConnexion()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 }
+

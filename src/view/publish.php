@@ -7,10 +7,10 @@
 <main id="post">
     <section id="createPost">
         <h1>Nouveau Post ?</h1>
-        <form action="" method="post" >
+        <form action="" method="post" enctype="multipart/form-data">
             <div>
                 <label for="imgVideo">Image ou video</label>
-                <input type="file" id="imgVideo" name="imgVideo" >
+                <input type="file" id="imgVideo" name="imgVideo" accept="image/*">
             </div>
             <div>
                 <label for="content">Description</label>

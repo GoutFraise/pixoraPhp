@@ -53,4 +53,10 @@ class User
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function getUser($id_user){
+        $sql = "SELECT * FROM user WHERE id_user=$id_user";
+        $stmt = $this->connexion->getConnexion()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }

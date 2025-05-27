@@ -25,17 +25,26 @@ class Publish{
                 $uploadFile = $uploadDir . basename($_FILES['imgVideo']['name']);
 
                 $imageFileType = strtolower(pathinfo($uploadFile, PATHINFO_EXTENSION));
-                $allowedTypes = array('jpg', 'jpeg', 'png', 'gif');
+                $allowedImagesTypes = array('jpg', 'jpeg', 'png', 'gif');
+                $allowedVideoTypes = array('mp4');
                 
-                if (in_array($imageFileType, $allowedTypes)) {
+                if (in_array($imageFileType, $allowedImagesTypes)) {
                     if (move_uploaded_file($_FILES['imgVideo']['tmp_name'], $uploadFile)) {
                         $post = new Post();
-                        $postSend=$post->addPost($_POST['content'], $uploadFile, $_SESSION["Id"]);
+                        $postSend=$post->addPost($_POST['content'], $uploadFile, null, $_SESSION["Id"]);
+                    } else {
+                        $postSend= "Error uploading file.";
+                    }
+                } 
+                else if (in_array($imageFileType, $allowedVideoTypes)) {
+                    if (move_uploaded_file($_FILES['imgVideo']['tmp_name'], $uploadFile)) {
+                        $post = new Post();
+                        $postSend=$post->addPost($_POST['content'],null, $uploadFile, $_SESSION["Id"]);
                     } else {
                         $postSend= "Error uploading file.";
                     }
                 } else {
-                    $postSend= "Only JPG, JPEG, PNG, and GIF files are allowed.";
+                    $postSend= "Only JPG, JPEG, PNG, and GIF andmp4 files are allowed.";
                 }
             }
             else{

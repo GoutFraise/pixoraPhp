@@ -27,7 +27,7 @@
                 <input type="mail" name="mail" id="mail" placeholder="Entre une adresse mail">
             </div>
             <div>
-                <label for="password">Mot de passe</label>
+                <label for="password">Mot de passe avec 1 majuscule 1 minuscule 1 chifrre 1 caractere special et au minimun 8 caractere</label>
                 <input type="password" name="password" id="password" placeholder="Entre un mot de passe">
             </div>
             <div>

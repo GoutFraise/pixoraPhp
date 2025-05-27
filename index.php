@@ -47,7 +47,8 @@ try {
     }else {
         header("Location: connexion");
     }
-} catch (Exception $e) {
+} 
+catch (Exception $e) {
     $errorMessage = $e->getMessage();
-    require_once 'view/error.php';
+    require_once 'src/view/error.php';
 }

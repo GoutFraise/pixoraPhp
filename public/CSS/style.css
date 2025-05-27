@@ -305,9 +305,9 @@ header > nav > .connection {
 	color: var(--color-black);
 	font-size: 22px;
 }
-.listarticle > article > img , #ourPost >article>img {
+.listarticle > article > img , #ourPost >article>img, #ourPost >article>video {
 	width: 100%;
-	height: 200px;
+	height: 400px;
 	border-radius: 16px;
 	object-fit: cover;
 }
@@ -345,7 +345,7 @@ header > nav > .connection {
 	font-size: 2.5rem;
 	font-weight: 700;
 }
-#createPost>form{
+/* #createPost>form{
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
@@ -380,9 +380,7 @@ header > nav > .connection {
     font-weight: 700;
     cursor: pointer;
 }
-#createPost>form>div>.upload-box input[type="file"] {
-    display: none;
-}
+
 #createPost>form>.description label {
     font-weight: 700;
 }
@@ -391,4 +389,69 @@ header > nav > .connection {
     padding: 0.5rem;
 	border: 0.2rem solid var(--color-black);
 	border-radius: 0.5rem;
+} */
+ #createPost > form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
 }
+
+#createPost > form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#createPost > form > div > label {
+    font-size: 1.4rem;
+}
+
+#createPost > form > input[type="submit"] {
+    background-color: var(--color-red);
+    padding: 16px 36px;
+    color: var(--color-white);
+    border-radius: 8px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#createPost > form > div > .upload-box {
+    border: 0.2rem dashed var(--color-gray);
+    padding: 3rem;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	gap: 1rem;
+}
+#createPost > form > div > .upload-box label {
+    color: var(--color-red);
+    font-weight: 700;
+    cursor: pointer;
+}
+#createPost > form > .description label {
+    font-weight: 700;
+}
+.description input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 0.2rem solid var(--color-black);
+    border-radius: 0.5rem;
+}
+.custom-file-button {
+    background-color: var(--color-white);
+    color: var(--color-red);
+    border: 0.1rem solid var(--color-red);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+.custom-file-button:hover {
+    background-color: var(--color-gray);
+}
+#file-chosen,#imgVideo {
+    display: none;
+}
+

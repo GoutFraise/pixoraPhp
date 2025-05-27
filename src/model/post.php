@@ -8,13 +8,14 @@ class Post
     {
         $this->connexion = new Database();
     }
-    public function addPost(string $content, string $imgVideo, string $id_user)
+    public function addPost(string $content,  $image , $video, string $id_user,)
     {
-        $sql = " INSERT INTO post (content, imgVideo, id_user)
-        VALUES (:content, :imgVideo, :id_user)";
+        $sql = " INSERT INTO post (content, image, video ,id_user)
+        VALUES (:content, :image ,:video , :id_user)";
         $stmt = $this->connexion->getConnexion()->prepare($sql);
         $stmt->bindParam(':content', $content);
-        $stmt->bindParam(':imgVideo', $imgVideo);
+        $stmt->bindParam(':image', $image);
+        $stmt->bindParam(':video', $video);
         $stmt->bindParam(':id_user', $id_user);
         $stmt->execute();
         return "Nouveau post créé avec succès";

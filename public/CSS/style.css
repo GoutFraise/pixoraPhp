@@ -230,6 +230,7 @@ header > nav > .connection {
 	padding: 4rem;
 	display: flex;
 	justify-content: center;
+	overflow: auto;
 }
 #home>section {
 	background-color: var(--color-white);
@@ -334,8 +335,59 @@ header > nav > .connection {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--color-light-gray);
-	padding: 16px;
+	padding: 3rem;
 	border-radius: 16px;
-	gap: 16px;
-	align-items: stretch;
+	gap: 3rem;
+	align-items: center;
+}
+#createPost>h1{
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+#createPost>form{
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	width: 100%;
+}
+#createPost>form>div{
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+#createPost>form>div>label{
+	font-size: 1.4rem;
+}
+#createPost>form>input{
+	background-color: var(--color-red);
+    padding: 16px 36px;
+    color: var(--color-white);
+    border-radius: 8px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+#createPost>form>div>.upload-box {
+    border: 0.2rem dashed var(--color-gray);
+    padding: 4rem;
+    text-align: center;
+}
+
+#createPost>form>div>.upload-box label {
+    color: var(--color-red);
+    font-weight: 700;
+    cursor: pointer;
+}
+#createPost>form>div>.upload-box input[type="file"] {
+    display: none;
+}
+#createPost>form>.description label {
+    font-weight: 700;
+}
+.description input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+	border: 0.2rem solid var(--color-black);
+	border-radius: 0.5rem;
 }

@@ -48,7 +48,6 @@ use Formation\PixoraPhp\Model\User;
                     </div>
                 </article>
                 ';
-
             }
             ?>
         </div>

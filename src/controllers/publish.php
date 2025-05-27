@@ -1,12 +1,13 @@
 <?php
 namespace Formation\PixoraPhp\Controllers;
 use Formation\PixoraPhp\Model\Post;
+use Formation\PixoraPhp\Model\User;
 class Publish{
     public function execute()
     {
         if(isset($_POST["content"])&& isset($_FILES["imgVideo"]))
         {
-            if(!empty($_POST['content']) && preg_match("/^\w{0,50}$/",$_POST["content"])
+            if(!empty($_POST['content']) && preg_match("/^[\w\s]{0,50}$/",$_POST["content"])
             && !empty($_FILES["imgVideo"]) && $_FILES['imgVideo']['error'] == UPLOAD_ERR_OK){
                 $uploadDir = 'uploads/'.$_SESSION["Id"].'/';
                 if (!file_exists($uploadDir)) {
@@ -21,8 +22,6 @@ class Publish{
                     if (move_uploaded_file($_FILES['imgVideo']['tmp_name'], $uploadFile)) {
                         // Stockez le chemin du fichier dans la base de données
                         $filePath = $uploadFile;
-                        echo "File uploaded: " . $filePath;
-
                         $post = new Post();
                         $postSend=$post->addPost($_POST['content'], $filePath, $_SESSION["Id"]);
                     } else {
@@ -31,7 +30,6 @@ class Publish{
                 } else {
                     $postSend= "Only JPG, JPEG, PNG, and GIF files are allowed.";
                 }
-                
             }
             else{
                 $postSend="No file uploaded or an error occurred.";;
@@ -40,6 +38,8 @@ class Publish{
         else{
             $postSend="frmulaire pas rempli coreectement";
         }
+        $getpost = new Post();
+        $getAllPost=$getpost->postFromUser($_SESSION["Id"]);
         require_once 'src/view/publish.php';
     }
 }

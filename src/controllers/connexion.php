@@ -16,6 +16,8 @@ class Connexion{
             && !empty($_POST['password'])
             // && preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*+-?&])[A-Za-z\d@$!%*+-?&]{8,}$/',$_POST["password"])
             ){
+                $_POST['mail']= $this->sanitize($_POST['mail']);
+                $_POST['password']= $this->sanitize($_POST['password']);
                 $alluser = new User();
                 $getAllUser= $alluser->isUser();
                 foreach ($getAllUser as $user) {

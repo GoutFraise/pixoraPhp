@@ -157,6 +157,7 @@ footer{
 	padding: 8px 32px;
 	font-weight: 600;
 	height: 5dvh;
+	align-items: center;
 }
 footer>div{
 	display: flex;
@@ -230,14 +231,14 @@ header > nav > .connection {
 	padding: 4rem;
 	display: flex;
 	justify-content: center;
-	overflow: auto;
+	
 }
 #home>section {
 	background-color: var(--color-white);
 	border-radius: 16px;
 	padding: 32px;
 	width: 100%;
-
+	overflow: auto;
 }
 .filtre {
 	display: flex;
